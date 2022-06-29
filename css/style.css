@@ -1,0 +1,569 @@
+@charset "utf-8";
+
+.section {
+  /* background-color: gainsboro; */
+  background-image: url(/img/bg.png);
+  background-size: cover;
+}
+
+/* 풀페이지 네비게이션바 텍스트 색상 */
+#fp-nav ul li .fp-tooltip {
+  color: #000;
+}
+
+
+#header {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: rgb(0 0 0 / 15%) 2px 0px 5px;
+}
+
+#main {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+#footer {
+  width: 100%;
+  height: 90px;
+  background-color: white;
+  z-index: 2;
+}
+
+/* container */
+.container {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+
+/* header */
+.header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header h1 {
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+  font-size: 30px;
+  flex: 1;
+  line-height: 2.5;
+  margin: 0 20px;
+}
+
+.header nav {
+  flex: 8;
+}
+
+.header nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header nav ul li {
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0 20px;
+  line-height: 5;
+}
+
+
+/* 햄버거메뉴 */
+.menu_icon {
+  display: none;
+}
+
+/* 사이트맵 */
+.header_sitemap {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 87px;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: all .5s;
+  background: #FFF;
+  z-index: 4;
+  box-shadow: 0 3px 12px rgb(0 0 0 / 20%);
+}
+
+.header_sitemap.on {
+  height: 340px;
+}
+
+.sitemap {
+  padding: 25px;
+}
+
+.sitemap ul li {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.sitemap ul li a {
+  font-weight: 600;
+  color: rgb(47, 47, 47);
+}
+
+
+
+
+
+/* s0 메인 */
+.s0 {
+  position: relative;
+}
+
+.main_all {
+  width: 100%;
+  height: 800px;
+}
+
+.s0_title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  animation: main_title 1.5s ease-in-out;
+}
+
+@keyframes main_title {
+  from {
+    top: -50%;
+    opacity: 0;
+  }
+
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+.s0_title div {
+  font-weight: 300;
+  font-size: 115px;
+}
+
+.s0_title .sub_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.s0_title div .sub_title {
+  padding: 15px;
+  font-size: 18px;
+}
+
+
+
+/* s1 어바웃*/
+.s1 h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 50px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 200px;
+}
+
+.about_all {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: unset;
+}
+
+.about_img {
+  margin-right: 100px;
+}
+
+.about_text {
+  display: flex;
+  flex-direction: column;
+}
+
+.about_text_1 {
+  margin-bottom: 20px;
+}
+
+.about_text h4 {
+  font-size: 20px;
+}
+
+
+/* s2 스킬 */
+.s2 h2 {
+  text-align: center;
+  margin-top: 200px;
+}
+
+.skills_all {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 80px;
+}
+
+.skills_cont {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 15px;
+  margin-bottom: 20px;
+  border-radius: 7px;
+  padding: 20px 20px;
+}
+
+.skills_title {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.skills_bar {
+  margin-top: 5px;
+  width: 100%;
+  height: 8px;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: rgb(0 0 0 / 15%) 2px 0px 3px;
+  /* background: rgba(0, 0, 0, 0.2); */
+}
+
+.skills_bar .skills_per {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 80%;
+  background: black;
+  border-radius: 6px;
+  animation: progress 6s ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes progress {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.skills_bar .jqurey {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 60%;
+  background: black;
+  border-radius: 6px;
+}
+
+.skills_bar .xd {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 60%;
+  background: black;
+  border-radius: 6px;
+}
+
+.skills_per .tooltip {
+  position: absolute;
+  right: -14px;
+  top: -32px;
+  font-size: 14px;
+  background: black;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.tooltip::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  height: 8px;
+  width: 8px;
+  background-color: black;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.skills_cont p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+
+
+/* s3 프로젝트 */
+.s3 h2 {
+  text-align: center;
+  margin-top: 200px;
+}
+
+.s4 h2 {
+  text-align: center;
+  margin-top: 200px;
+}
+
+.s5 h2 {
+  text-align: center;
+  margin-top: 200px;
+}
+
+.project_all {
+  margin-top: 60px;
+  padding: 0 20px;
+  display: flex;
+}
+
+.project_text {
+  width: 100%;
+  margin-right: 10px;
+}
+
+.project_text .project_numer_title {
+  text-align: left;
+}
+
+.project_text .project_numer_title h3 {
+  font-size: 28px;
+}
+
+.project_text .project_numer_title span {
+  display: block;
+  font-size: 16px;
+}
+
+.project_text .project_numer_title strong {
+  font-size: 30px;
+}
+
+.content_p_1 {
+  margin-bottom: 20px;
+}
+
+.project_content .content_p_1 span {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.project_content .content_p_1 p {
+  font-size: 18px;
+}
+
+.button {
+  /* background-color: #4CAF50; */
+  /* Green */
+  border: none;
+  color: white;
+  padding: 12px 60px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button {
+  /* background-color: rgb(243, 243, 234); */
+  color: black;
+  border: 2px solid #555555;
+}
+
+.button:hover {
+  background-color: black;
+  color: white;
+}
+
+
+/* s6 디자인 */
+.s6 h2 {
+  text-align: center;
+  margin-top: 150px;
+}
+
+.design_content {
+  padding: 10px;
+  overflow: hidden;
+}
+
+.design_content_1 {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around
+}
+
+.design_1_box a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.design_1_box figure img {
+  width: 300px;
+  transition: 0.3s;
+}
+
+.design_1_box a:hover figure img,
+.design_1_box a:focus figure img {
+  transform: scale(1.1);
+}
+
+
+
+/* s6 디자인 */
+.s7 h2 {
+  text-align: center;
+  margin-top: 150px;
+}
+
+.design_content {
+  padding: 10px;
+  overflow: hidden;
+}
+
+.design_content_2 {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around
+}
+
+.design_2_box figure img {
+  width: 100%;
+}
+
+.design_2_box a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.design_2_box figure {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.design_2_box figcaption {
+  width: 100%;
+  height: 652px;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  text-align: center;
+  line-height: 300px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.design_2_box a:hover figcaption,
+.design_2_box a:focus figcaption {
+  opacity: 1;
+}
+
+.s8 h2 {
+  text-align: center;
+  margin-top: 150px;
+}
+
+
+
+/* s9 컨텍트 */
+.s9 h2 {
+  text-align: center;
+  margin-top: 150px;
+}
+
+form {
+  padding: 10px;
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+.feedback-input {
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 1px solid black;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.feedback-input:focus {
+  border: 2px solid black;
+}
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+[type="submit"] {
+  /* font-family: 'Montserrat', Arial, Helvetica, sans-serif; */
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  border: 1px solid black;
+  cursor: pointer;
+  color: black;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+}
+
+[type="submit"]:hover {
+  background: black;
+  color: white;
+}
+
+.s8 p {
+  text-align: center;
+  margin-top: 227px;
+  color: #555;
+}
